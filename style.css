@@ -1,0 +1,123 @@
+/* General Styles */
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0b0c10;
+    color: #66fcf1;
+    overflow-x: hidden;
+}
+
+/* Futuristic Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 15px #45a29e;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    padding: 15px 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #66fcf1;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: #ff0033;
+    text-shadow: 0 0 5px #ff0033, 0 0 10px #ff0033;
+}
+
+/* Sections with Smooth Fade */
+.section {
+    padding: 80px 10%;
+    min-height: 100vh;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 1s ease-out;
+}
+
+/* Active Section Animation */
+.section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glitch Animation */
+.glitch {
+    position: relative;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #ff0033, 0 0 10px #ff0033;
+    animation: glitch 0.5s infinite alternate;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 2px 2px 5px #ff0033, -2px -2px 5px #66fcf1; }
+    100% { text-shadow: -2px -2px 5px #ff0033, 2px 2px 5px #66fcf1; }
+}
+
+/* Parallax Background */
+.parallax {
+    background: url('https://source.unsplash.com/1600x900/?space,cyberpunk') no-repeat center center/cover;
+    height: 50vh;
+    width: 100%;
+    position: relative;
+}
+
+.parallax::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Button Effects */
+.futuristic-btn {
+    background: transparent;
+    color: #66fcf1;
+    border: 2px solid #66fcf1;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.futuristic-btn:hover {
+    background: #ff0033;
+    box-shadow: 0 0 10px #ff0033, 0 0 20px #ff0033;
+    color: #fff;
+}
+
+/* Floating Particle Effect */
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #66fcf1;
+    border-radius: 50%;
+    animation: floating 4s infinite ease-in-out;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Cosmic Interstellar Space Protocol</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="#why-cisp">Why CISP?</a></li>
+            <li><a href="#future">Future</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+    </nav>
+
+    <div class="parallax"></div>
+
+    <div id="introduction" class="section">
+        <h1 class="glitch">Introduction</h1>
+        <p>Welcome to the future of Web3 technology.</p>
+        <button class="futuristic-btn">Learn More</button>
+    </div>
+
+    <div id="features" class="section">
+        <h1 class="glitch">Key Features</h1>
+        <ul>
+            <li><strong>CISP Blockchain:</strong> A scalable Web3 solution.</li>
+            <li><strong>Dual Token Economy:</strong> XCIS & CIS Coins.</li>
+            <li><strong>Exclusive NFT Marketplace:</strong> Unique assets.</li>
+        </ul>
+    </div>
+
+    <div id="roadmap" class="section">
+        <h1 class="glitch">Roadmap</h1>
+        <p>Development, expansion, and innovation ahead.</p>
+    </div>
+
+    <div id="why-cisp" class="section">
+        <h1 class="glitch">Why CISP?</h1>
+        <p>A game-changer in Web3 technology.</p>
+    </div>
+
+    <div id="future" class="section">
+        <h1 class="glitch">The Future of CISP</h1>
+        <p>Exciting new possibilities await.</p>
+    </div>
+
+    <div id="conclusion" class="section">
+        <h1 class="glitch">Conclusion</h1>
+        <p>Join the decentralized revolution today!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+    <!-- PAGE LOADING ANIMATION -->
+    <div id="loader">
+        <span class="loader-text">LOADING CISP...</span>
+    </div>
+
+    <!-- HEADER -->
+    <header class="bg-blue-900 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">CISP - Cosmic Interstellar Space Protocol</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#introduction" class="hover:underline">Introduction</a></li>
+                    <li><a href="#features" class="hover:underline">Features</a></li>
+                    <li><a href="#roadmap" class="hover:underline">Roadmap</a></li>
+                    <li><a href="#whitelist" class="hover:underline">Whitelist</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container mx-auto p-4">
+        <section id="introduction">
+            <h2 class="text-3xl font-bold mb-4">Introduction</h2>
+            <p>CISP is an advanced blockchain integrating AI, NFTs, and Web3 mining...</p>
+        </section>
+
+        <section id="features">
+            <h2 class="text-3xl font-bold mb-4">Key Features</h2>
+            <ul class="list-disc list-inside">
+                <li>Custom Layer-1 Blockchain</li>
+                <li>Dual Token Economy</li>
+                <li>AI-Powered Security</li>
+                <li>Decentralized NFT Marketplace</li>
+            </ul>
+        </section>
+
+        <!-- WHITELIST SECTION -->
+        <section id="whitelist" class="mt-8">
+            <h2 class="text-3xl font-bold mb-4">Whitelist Application</h2>
+            <div id="whitelist-closed" class="hidden text-center text-red-500 font-bold">
+                🚫 Whitelist is currently closed!
+            </div>
+
+            <form id="whitelist-form" class="bg-gray-800 p-6 rounded-lg shadow-lg max-w-lg mx-auto">
+                <label class="block text-gray-400 mb-2">Email</label>
+                <input class="border rounded w-full py-2 px-3 mb-4" id="email" type="email" required>
+
+                <label class="block text-gray-400 mb-2">Telegram ID</label>
+                <input class="border rounded w-full py-2 px-3 mb-4" id="telegram" type="text" required>
+
+                <label class="block text-gray-400 mb-2">Wallet Address</label>
+                <input class="border rounded w-full py-2 px-3 mb-4" id="wallet" type="text" required>
+
+                <!-- Google reCAPTCHA -->
+                <div class="g-recaptcha mb-4" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Apply</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white p-4 text-center">
+        <p>&copy; 2025 CISP. All rights reserved.</p>
+    </footer>
+
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script>
+        // PAGE LOADER SCRIPT
+        window.onload = function () {
+            setTimeout(() => {
+                document.getElementById("loader").style.display = "none";
+            }, 2000);
+        };
+
+        // WHITELIST TOGGLE (Admin Controlled)
+        const whitelistOpen = true; // Set to false to close whitelist
+        if (!whitelistOpen) {
+            document.getElementById("whitelist-form").classList.add("hidden");
+            document.getElementById("whitelist-closed").classList.remove("hidden");
+        }
+
+        // FORM SUBMISSION
+        document.getElementById("whitelist-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const telegram = document.getElementById("telegram").value;
+            const wallet = document.getElementById("wallet").value;
+
+            alert("Form submitted successfully! Your details have been recorded.");
+            
+            // Data Export (Optional: Send to Google Sheet via Backend)
+        });
+    </script>
+</body>
+</html>
